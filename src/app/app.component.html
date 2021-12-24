@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-md navbar-dark flex-md-nowrap p-0 shadow" style="background-color: #3f51b5">
+  <ng-container>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">{{ title }}</a>
+  </ng-container>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap" [routerLinkActive]="'active'">
+      <a class="nav-link" role="button" [routerLink]="['/home']">Home</a>
+    </li>
+    <li class="nav-item text-nowrap" [routerLinkActive]="'active'">
+      <a class="nav-link" role="button" [routerLink]="['/posts']">Posts</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

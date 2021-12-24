@@ -1,0 +1,33 @@
+<div class="container">
+  <div *ngIf="post$ | async as post" class="row">
+    <div class="card mt-4 ml-4 mr-4 col-md-12">
+      <h2 class="card-header">Post details</h2>
+      <img class="card-img-top mt-2 col-md-4" src="../../../../assets/fff.jpg" alt="" />
+      <div class="card-body">
+        <h3 class="card-title">{{ post?.title }}</h3>
+        <div class="card-subtitle"><strong>Category: </strong>{{ post.id }}-{{ post?.title }}</div>
+        <p class="card-text">
+          <strong>Employee: </strong> {{ post?.body }}
+          {{ post?.body }}
+        </p>
+        <div class="row price-section">
+          <div class="col-xs-12 col-md-6">
+            <p class="lead">{{ post?.user?.username }}</p>
+          </div>
+        </div>
+        <div class="row comments-section">
+          <div class="col-xs-12 col-md-12">
+            <h4 class="card-header">Comments</h4>
+            <div *ngIf="post.comments" id="comments" class="row">
+              <ng-container *ngFor="let comment of post.comments">
+                <div>{{ comment.name }}</div>
+                <div>{{ comment.body }}</div>
+                <!-- <app-review-item class="item mt-4 ml-4 mr-4 card" [item]="review"></app-review-item> -->
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

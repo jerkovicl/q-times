@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="well well-sm">
+    <strong>Display</strong>
+    <div class="btn-group">
+      <!--   <button mat-icon-button color="accent" aria-label="Change layout" (click)="changeLayout()">
+        <mat-icon>{{ !isList ? 'list' : 'view_module' }}</mat-icon>
+      </button> -->
+    </div>
+  </div>
+  <h2 class="card-header">Posts List</h2>
+  <div *ngIf="posts$ | async as posts" id="posts" class="row">
+    <ng-container *ngFor="let post of posts">
+      <app-post-item
+        class="item mt-4 ml-4 mr-4 card"
+        [ngClass]="isList ? 'list' : 'grid'"
+        [post]="post"
+      ></app-post-item>
+    </ng-container>
+  </div>
+</div>
