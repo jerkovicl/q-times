@@ -23,4 +23,8 @@ export class PostsService {
   get<T>(path: string, id: string | number): Observable<T> {
     return this.http.get<T>(`${environment.apiUrl}/${path}/${id}`);
   }
+
+  search<T>(path: string, term: string): Observable<T[]> {
+    return this.http.get<T[]>(`${environment.apiUrl}/${path}/?q=${term}`);
+  }
 }

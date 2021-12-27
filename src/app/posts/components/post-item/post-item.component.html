@@ -4,15 +4,10 @@
     <h3 class="card-title">
       <a [routerLink]="['/posts/detail/', post.id]">{{ post?.title }} </a>
     </h3>
-    <div class="card-subtitle"><strong>Body: </strong>{{ post?.body }}</div>
+    <div class="card-subtitle"><strong>Posted by: </strong>{{ post?.user?.username }}</div>
     <p class="card-text">
       {{ post?.body }}
     </p>
-    <div class="row price-section">
-      <div class="col-xs-12 col-md-6">
-        <p class="lead">{{ post?.user?.username }}</p>
-      </div>
-    </div>
     <div class="row actions-section">
       <div class="col-xs-12 col-md-6">
         <!--   <button mat-raised-button type="button" color="warn" (click)="delete(post.id)">Delete</button> -->

@@ -1,0 +1,17 @@
+<!-- <input type="text" id="search" placeholder="Search for posts..." [formControl]="searchControl" /> -->
+
+<input
+  #searchInput
+  id="search"
+  placeholder="Search for posts..."
+  type="text"
+  list="items"
+  [(ngModel)]="searchTerm"
+  (input)="onChange($event)"
+  (keyup)="onSearch($event, searchTerm)"
+  (change)="onSearch($event, searchTerm)"
+/>
+<datalist id="items">
+  <option *ngFor="let item of items" [attr.data-val]="item.id">{{ item.title }} - {{ item.id }}</option>
+</datalist>
+<input type="hidden" name="answer" id="search-hidden" />

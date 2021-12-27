@@ -6,6 +6,7 @@ import { UntilDestroy } from '@ngneat/until-destroy';
 import { forkJoin, Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { IUserListItem } from 'src/app/posts/models/user.model';
+import { PostsStateService } from 'src/app/posts/posts-state.service';
 import { IPost, IPostCommentListItem, IPostListItem } from './models/post.model';
 import { PostsService } from './posts.service';
 
@@ -17,9 +18,12 @@ import { PostsService } from './posts.service';
 })
 export class PostsComponent implements OnInit, OnDestroy {
   public posts$!: Observable<IPost[] | null>;
-  public isList = true;
 
-  constructor(private postsService: PostsService, private router: Router) {
+  constructor(
+    private postsService: PostsService,
+    private postsStateService: PostsStateService,
+    private router: Router
+  ) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
@@ -42,7 +46,7 @@ export class PostsComponent implements OnInit, OnDestroy {
       users: users$,
     }).pipe(
       map((res) => {
-        // map comments and user to post
+        // map comments and user to post and save to state
 
         return res.posts.map((post: IPostListItem) => {
           const mappedPost: IPost = {
@@ -53,12 +57,23 @@ export class PostsComponent implements OnInit, OnDestroy {
           return mappedPost;
         }) as IPost[];
       }),
-      tap((res) => console.log('res', res)),
+      tap((res) => {
+        console.log('res', res);
+        this.postsStateService.setPosts(res);
+      }),
       catchError((error: HttpErrorResponse) => of(null))
     );
   }
-  changeLayout(): void {
-    this.isList = !this.isList;
+
+  onSearchChange(data: IPost[]) {
+    this.posts$ = of(data);
+  }
+
+  onItemSelect(id: string | number) {
+    console.log('item selected', event);
+    /*   this.router.navigate([]).then((result) => {
+      window.open(`/posts/detail/${id}`, '_blank');
+    }); */
   }
 
   ngOnDestroy(): void {
