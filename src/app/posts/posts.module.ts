@@ -5,10 +5,9 @@ import { PostDetailComponent } from './components/post-detail/post-detail.compon
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts.component';
-import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
-  declarations: [PostsComponent, PostItemComponent, PostDetailComponent, PostCommentComponent, SearchComponent],
+  declarations: [PostsComponent, PostItemComponent, PostDetailComponent, PostCommentComponent],
   imports: [PostsRoutingModule, SharedModule],
   providers: [],
 })

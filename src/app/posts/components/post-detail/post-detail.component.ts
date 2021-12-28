@@ -15,7 +15,7 @@ import { PostsService } from './../../posts.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostDetailComponent implements OnInit, OnDestroy {
-  post$!: Observable<any>;
+  public post$!: Observable<IPost | null>;
   constructor(
     private postsService: PostsService,
     private postsStateService: PostsStateService,

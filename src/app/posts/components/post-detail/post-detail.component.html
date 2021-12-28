@@ -1,19 +1,18 @@
 <div class="container">
   <div *ngIf="post$ | async as post" class="row">
-    <div class="card mt-4 ml-4 mr-4 col-md-12">
-      <h2 class="card-header">Post details</h2>
+    <div class="card mt-4 ms-4 me-4 col-md-8">
+      <h3 class="card-title">{{ post?.title }}</h3>
       <div class="card-body">
-        <h3 class="card-title">{{ post?.title }}</h3>
         <div class="card-subtitle"><strong>Posted by: </strong>{{ post?.user?.username }}</div>
         <p class="card-text">
           {{ post?.body }}
         </p>
         <div class="row comments-section">
-          <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-8">
             <h4 class="card-header">Comments</h4>
             <div *ngIf="post.comments" id="comments" class="row">
               <ng-container *ngFor="let comment of post.comments">
-                <app-post-comment class="item mt-4 ml-4 mr-4 card" [item]="comment"></app-post-comment>
+                <app-post-comment class="item mt-4 ms-4 me-4 card" [item]="comment"></app-post-comment>
               </ng-container>
             </div>
           </div>

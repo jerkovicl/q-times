@@ -11,18 +11,15 @@ export class HttpErrorInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-  //  this.loadingDialogService.openDialog();
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
         console.error('Error from error interceptor', JSON.stringify(error));
         if (error.status !== 200) {
-        //  this.errorDialogService.openDialog(error.message ?? JSON.stringify(error), error.status);
+          // in prod pass error to notify or logging service
         }
-        return throwError(error);
+        return throwError(() => error);
       }),
-      finalize(() => {
-      //  this.loadingDialogService.hideDialog();
-      })
+      finalize(() => {})
     );
   }
 }

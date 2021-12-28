@@ -9,7 +9,7 @@ export class GlobalErrorHandler implements ErrorHandler {
 
   handleError(error: ResponseError): void {
     if (error?.status !== 200) {
-      // this.errorDialogService.openDialog(error?.message || 'Undefined client error');
+      // in prod pass error to notify or logging service
     }
     console.error('Error from global error handler', error);
   }
