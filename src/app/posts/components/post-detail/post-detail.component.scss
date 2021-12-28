@@ -1,0 +1,85 @@
+.focus-section {
+  background: var(--bg-focus-section);
+  font-family: var(--font1);
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.title-section {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tx-focus-section-title);
+}
+
+.card {
+  font-size: 1rem;
+  border: var(--focus-border-card);
+
+  .card-body {
+    background: var(--bg-focus-card);
+    color: var(--tx-focus-card);
+
+    .card-text {
+      font-weight: var(--tx-focus-font-weight);
+    }
+  }
+
+  .card-image {
+    position: relative;
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background: var(--bg-focus-card-overlay);
+    }
+
+    &:hover .image-overlay {
+      opacity: 1;
+    }
+  }
+
+  .hover-text {
+    position: relative;
+    text-align: center;
+    color: var(--tx-focus-hover);
+  }
+
+  .card-title {
+    font-family: var(--font1);
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .card-title a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .card-footer {
+    background: var(--bg-focus-footer);
+    color: var(--tx-focus-footer);
+
+    .card-footer__info {
+      font-size: 1rem;
+      font-weight: 300;
+      position: relative;
+    }
+  }
+
+  .username {
+    font-weight: 600;
+  }
+
+  .username-text {
+    text-decoration: none;
+    position: relative;
+    color: var(--tx-focus-footer);
+  }
+}

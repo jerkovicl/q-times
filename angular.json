@@ -27,10 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
               {
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-              }
+              },
+              {
+                "input": "src/_variables.scss"
+              },
+              "src/styles.scss"
             ],
             "scripts": [],
             "vendorChunk": true,

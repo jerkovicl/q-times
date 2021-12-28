@@ -1,7 +1,22 @@
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
+// @import "../../../node_modules/bootstrap/scss/functions";
+// @import "../../../node_modules/bootstrap/scss/variables";
+// @import "../../../node_modules/bootstrap/scss/mixins";
 
 .search-container {
   margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.focus-section {
+  background: var(--bg-focus-section);
+  font-family: var(--font1);
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.title-section {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tx-focus-section-title);
 }

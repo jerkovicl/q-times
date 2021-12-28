@@ -1,23 +1,33 @@
-<div class="container">
-  <div *ngIf="post$ | async as post" class="row">
-    <div class="card mt-4 ms-4 me-4 col-md-8">
-      <h3 class="card-title">{{ post?.title }}</h3>
-      <div class="card-body">
-        <div class="card-subtitle"><strong>Posted by: </strong>{{ post?.user?.username }}</div>
-        <p class="card-text">
-          {{ post?.body }}
-        </p>
-        <div class="row comments-section">
-          <div class="col-xs-12 col-md-8">
-            <h4 class="card-header">Comments</h4>
-            <div *ngIf="post.comments" id="comments" class="row">
-              <ng-container *ngFor="let comment of post.comments">
-                <app-post-comment class="item mt-4 ms-4 me-4 card" [item]="comment"></app-post-comment>
-              </ng-container>
+<section id="focus" class="focus-section">
+  <div class="container-lg py-5">
+    <div *ngIf="post$ | async as post" class="row row-cols-1 row-cols-md-1 g-4">
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-image">
+            <div class="hover-text">
+              <img src="https://picsum.photos/800/600" class="card-img-top" alt="..." />
             </div>
+            <div class="image-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{ post?.title }}</h3>
+            <p class="card-text">
+              {{ post?.body }}
+            </p>
+          </div>
+          <div class="card-footer py-3">
+            <div class="card-footer__info">
+              <span>posted by </span>
+              <span class="username">{{ post?.user?.username }} </span>
+            </div>
+          </div>
+          <div *ngIf="post.comments" id="comments" class="row row-cols-1 row-cols-md-1 g-4">
+            <ng-container *ngFor="let comment of post.comments">
+              <app-post-comment class="item mt-4 ms-4 me-4 card" [item]="comment"></app-post-comment>
+            </ng-container>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
