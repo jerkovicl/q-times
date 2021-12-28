@@ -54,7 +54,7 @@
   .card-title {
     font-family: var(--font1);
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 2.3rem;
   }
 
   .card-title a {
@@ -63,7 +63,7 @@
   }
 
   .card-footer {
-    background: var(--bg-focus-footer);
+    background: var(--bg-focus-footer-username);
     color: var(--tx-focus-footer);
 
     .card-footer__info {

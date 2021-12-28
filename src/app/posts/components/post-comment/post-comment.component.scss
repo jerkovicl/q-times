@@ -29,7 +29,7 @@
   }
 
   .card-footer {
-    background: grey;
+    background: var(--bg-focus-footer-username);
     color: var(--tx-focus-footer);
 
     .card-footer__info {

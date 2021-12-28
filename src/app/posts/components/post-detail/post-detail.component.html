@@ -3,14 +3,8 @@
     <div *ngIf="post$ | async as post" class="row row-cols-1 row-cols-md-1 g-4">
       <div class="col">
         <div class="card shadow-sm h-100">
-          <div class="card-image">
-            <div class="hover-text">
-              <img src="https://picsum.photos/800/600" class="card-img-top" alt="..." />
-            </div>
-            <div class="image-overlay"></div>
-          </div>
           <div class="card-body">
-            <h3 class="card-title">{{ post?.title }}</h3>
+            <h1 class="card-title">{{ post?.title }}</h1>
             <p class="card-text">
               {{ post?.body }}
             </p>
@@ -21,9 +15,9 @@
               <span class="username">{{ post?.user?.username }} </span>
             </div>
           </div>
-          <div *ngIf="post.comments" id="comments" class="row row-cols-1 row-cols-md-1 g-4">
+          <div *ngIf="post.comments" id="comments" class="">
             <ng-container *ngFor="let comment of post.comments">
-              <app-post-comment class="item mt-4 ms-4 me-4 card" [item]="comment"></app-post-comment>
+              <app-post-comment class="item mt-4 card" [item]="comment"></app-post-comment>
             </ng-container>
           </div>
         </div>
