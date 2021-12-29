@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import { HttpHeaders } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { IPost } from 'src/app/posts/models/post.model';
-const headers = new HttpHeaders();
 
 @Injectable({
   providedIn: 'root',

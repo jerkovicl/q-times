@@ -7,9 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './not-found.component.html',
 })
 export class NotFoundComponent {
-  constructor(
-    private router: Router // private menuService: NbMenuService
-  ) {}
+  constructor(private router: Router) {}
 
   goToHome() {
     this.router.navigate(['/home'], { replaceUrl: true });

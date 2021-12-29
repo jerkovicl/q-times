@@ -24,15 +24,15 @@ export class SearchComponent implements OnInit {
   @Output() selected = new EventEmitter<number | string>();
   @Output() filtered = new EventEmitter<IPost[]>();
   @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
-  public searchTerm: string = '';
+  public searchTerm = '';
   constructor() {}
 
   ngOnInit(): void {}
 
   public onChange(event: any) {
     const input = event.target;
-    const lst = input.getAttribute('list');
-    const options = document.querySelectorAll(`#${lst} option`);
+    const list = input.getAttribute('list');
+    const options = document.querySelectorAll(`#${list} option`);
     const hiddenInput = <HTMLInputElement>document.getElementById(`${input.id}-hidden`);
     const inputValue = input.value;
     hiddenInput.value = inputValue;

@@ -56,7 +56,7 @@ export class PostsComponent implements OnInit, OnDestroy {
             user: res.users.find((user: IUserListItem) => user.id === post.userId),
           };
           return mappedPost;
-        }) as IPost[];
+        });
       }),
       tap((res) => {
         console.log('res', res);
@@ -93,7 +93,7 @@ export class PostsComponent implements OnInit, OnDestroy {
                     user: res.users.find((user: IUserListItem) => user.id === post.userId),
                   };
                   return mappedPost;
-                }) as IPost[];
+                });
               }),
               catchError((error: HttpErrorResponse) => of(null))
             )
@@ -104,7 +104,7 @@ export class PostsComponent implements OnInit, OnDestroy {
           if (!data) {
             this.autocompleteItems$.next([]);
           } else {
-            this.autocompleteItems$.next(data as IPost[]);
+            this.autocompleteItems$.next(data);
           }
           console.log('search data', data);
         });
