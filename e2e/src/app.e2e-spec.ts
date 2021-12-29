@@ -12,7 +12,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('q-times app is running!');
+    expect(page.getTitleText()).toEqual('Q-Times');
   });
 
   afterEach(async () => {
