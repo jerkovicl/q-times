@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from 'src/app/shared/components/about/about.component';
 import { NotFoundComponent } from 'src/app/shared/components/not-found/not-found.component';
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./posts/posts.module').then((m) => m.PostsModule),
   },
   { path: 'home', redirectTo: 'posts' },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
   {
     path: '**',

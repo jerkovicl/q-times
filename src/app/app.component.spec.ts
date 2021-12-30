@@ -29,6 +29,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('title').textContent).toContain('Q-Times');
+    const title = compiled.querySelector('.navbar-brand')!;
+    expect(title.textContent).toContain('Q Times');
   });
 });

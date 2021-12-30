@@ -6,9 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { NotFoundComponent } from 'src/app/shared/components/not-found/not-found.component';
 import { SearchComponent } from 'src/app/shared/components/search/search.component';
+import { AboutComponent } from './components/about/about.component';
 import { LoaderComponent } from './components/loader/loader.component';
 
-const sharedComponents = [HeaderComponent, NotFoundComponent, SearchComponent, LoaderComponent];
+const sharedComponents = [HeaderComponent, NotFoundComponent, SearchComponent, LoaderComponent, AboutComponent];
 const sharedModules = [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, NgbModule];
 
 @NgModule({
