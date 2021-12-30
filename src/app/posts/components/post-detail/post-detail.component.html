@@ -13,6 +13,7 @@
               <span class="username">{{ post?.user?.username }} </span>
             </div>
           </div>
+          <h3 class="card-subtitle">Comments</h3>
           <div *ngIf="post.comments" id="comments" class="">
             <ng-container *ngFor="let comment of post.comments">
               <app-post-comment class="item mt-4 card" [item]="comment"></app-post-comment>

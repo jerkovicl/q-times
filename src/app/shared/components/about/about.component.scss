@@ -1,6 +1,11 @@
+.focus-section {
+  background: var(--bg-focus-section);
+  font-family: var(--font1);
+}
+
 .title-section {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--tx-focus-section-title);
-  margin-top: 10px;
+  //margin-top: 48px;
 }
