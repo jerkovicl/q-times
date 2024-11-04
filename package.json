@@ -47,7 +47,7 @@
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-jsdoc": "^50.4.0",
+    "eslint-plugin-jsdoc": "^50.4.3",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^5.2.1",
     "jasmine-core": "~5.4.0",
