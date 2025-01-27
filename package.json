@@ -67,6 +67,6 @@
     "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^5.3.2",
     "ts-node": "~10.9.2",
-    "typescript": "~5.5.4"
+    "typescript": "~5.7.3"
   }
 }
