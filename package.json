@@ -41,7 +41,7 @@
     "@schematics/angular": "^19.0.7",
     "@types/jasmine": "~5.1.4",
     "@types/jasminewd2": "~2.0.13",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.13.4",
     "@typescript-eslint/eslint-plugin": "^8.24.0",
     "@typescript-eslint/parser": "^8.20.0",
     "eslint": "^9.20.0",
