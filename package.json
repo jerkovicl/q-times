@@ -20,7 +20,7 @@
     "@angular/localize": "^19.2.13",
     "@angular/platform-browser": "^19.2.2",
     "@angular/platform-browser-dynamic": "^19.2.8",
-    "@angular/router": "^19.1.2",
+    "@angular/router": "^20.0.5",
     "@ng-bootstrap/ng-bootstrap": "^18.0.0",
     "@ngneat/until-destroy": "^10.0.0",
     "bootstrap": "^5.3.6",
