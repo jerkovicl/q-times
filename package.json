@@ -35,7 +35,7 @@
     "@angular-eslint/eslint-plugin-template": "^19.3.0",
     "@angular-eslint/schematics": "^20.0.0",
     "@angular-eslint/template-parser": "^19.3.0",
-    "@angular/cli": "^20.0.1",
+    "@angular/cli": "^20.0.5",
     "@angular/compiler-cli": "^19.2.11",
     "@angular/language-service": "^19.2.13",
     "@schematics/angular": "^19.2.11",
