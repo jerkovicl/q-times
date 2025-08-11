@@ -49,7 +49,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^51.2.1",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-prettier": "^5.5.4",
     "jasmine-core": "~5.8.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.4",
